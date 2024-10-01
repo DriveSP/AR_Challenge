@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>XR Spinosaurus</title>
+    <title>AR Reto</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -92,7 +92,7 @@
       <a-entity environment="preset: forest; lighting: none; shadow: none; lightPosition: 0 2.15 0"
                 hide-in-ar-mode></a-entity>
       
-      <a-entity id="dino" position="-1 0 -3" scale="0.5 0.5 0.5">
+      <a-entity id="rocky" position="-1 0 -3" scale="0.5 0.5 0.5">
         <a-entity position="0 2.15 0" rotation="0 55 0"
                   gltf-model="#rockybalboa"
                   animation-mixer
@@ -118,33 +118,9 @@
                ar-shadows="opacity: 0.3"
                visible="false"></a-plane>
     </a-scene>
-
-    <div id="text">
-      <h1>A-Frame Spinosaurus for VR/AR</h1>
-    
-      <p>
-        Model: <a href="https://sketchfab.com/3d-models/spinosaurus-2135501583704537907645bf723685e7">Spinosaurus</a> by 
-        <a href="https://sketchfab.com/VapTor">Vaptor-Studio</a>.
-      </p>
-      <p>
-        Size: <button id="btn_full">Full</button>
-        <button id="btn_half">1/2</button>
-        <button id="btn_quarter">1/4</button>
-      </p>
-      
-      <p>
-        This requires browser support for WebXR's AR mode, for example an
-        <a href="https://developers.google.com/ar/discover/supported-devices">ARCore-compatible</a>
-        Android phone with Chrome version 81 or higher.
-      </p>
-      
-      <p>
-        Powered by <a href="https://aframe.io/blog/aframe-v1.0.0/">A-Frame v1.0.0</a>.
-      </p>
-    </div>
     <script>
       function setSize(scale) {
-        document.getElementById('dino').setAttribute('scale', {x: scale, y: scale, z: scale});
+        document.getElementById('rocky').setAttribute('scale', {x: scale, y: scale, z: scale});
       }
       document.getElementById('btn_full').onclick = setSize.bind(this, 1);
       document.getElementById('btn_half').onclick = setSize.bind(this, 0.5);
